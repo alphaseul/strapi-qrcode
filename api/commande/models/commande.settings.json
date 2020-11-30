@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "name": "Commande"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "dateCommande": {
+      "type": "date"
+    },
+    "quantite": {
+      "type": "integer"
+    },
+    "client": {
+      "via": "commandes",
+      "model": "client"
+    },
+    "annonce": {
+      "via": "commandes",
+      "model": "annonce"
+    }
+  }
+}

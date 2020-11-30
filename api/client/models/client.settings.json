@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "Client",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "dateNaissance": {
+      "type": "date"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "numero": {
+      "type": "biginteger"
+    },
+    "adresse": {
+      "model": "adresse",
+      "via": "client"
+    },
+    "commandes": {
+      "collection": "commande",
+      "via": "client"
+    },
+    "commentaires": {
+      "collection": "commentaire",
+      "via": "client"
+    },
+    "entreprise": {
+      "via": "clients",
+      "model": "entreprise"
+    }
+  }
+}

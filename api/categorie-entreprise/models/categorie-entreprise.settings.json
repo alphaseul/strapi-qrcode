@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_entreprises",
+  "info": {
+    "name": "CategorieEntreprise",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "categorie_annonces": {
+      "collection": "categorie-annonce",
+      "via": "categorie_entreprise"
+    },
+    "entreprises": {
+      "via": "categorie_entreprise",
+      "collection": "entreprise"
+    }
+  }
+}

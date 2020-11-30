@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commentaires",
+  "info": {
+    "name": "Commentaire"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "note": {
+      "type": "integer"
+    },
+    "client": {
+      "via": "commentaires",
+      "model": "client"
+    },
+    "annonce": {
+      "via": "commentaires",
+      "model": "annonce"
+    }
+  }
+}

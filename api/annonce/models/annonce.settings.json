@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annonces",
+  "info": {
+    "name": "Annonce",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "categorie_annonce": {
+      "model": "categorie-annonce",
+      "via": "annonces"
+    },
+    "commandes": {
+      "collection": "commande",
+      "via": "annonce"
+    },
+    "commentaires": {
+      "collection": "commentaire",
+      "via": "annonce"
+    },
+    "entreprise": {
+      "model": "entreprise",
+      "via": "annonces"
+    },
+    "prix": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_annonces",
+  "info": {
+    "name": "CategorieAnnonce",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "note": {
+      "type": "integer"
+    },
+    "annonces": {
+      "via": "categorie_annonce",
+      "collection": "annonce"
+    },
+    "categorie_entreprise": {
+      "via": "categorie_annonces",
+      "model": "categorie-entreprise"
+    }
+  }
+}

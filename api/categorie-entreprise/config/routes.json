@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/categorie-entreprises",
+      "handler": "categorie-entreprise.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categorie-entreprises/count",
+      "handler": "categorie-entreprise.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categorie-entreprises/:id",
+      "handler": "categorie-entreprise.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/categorie-entreprises",
+      "handler": "categorie-entreprise.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/categorie-entreprises/:id",
+      "handler": "categorie-entreprise.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/categorie-entreprises/:id",
+      "handler": "categorie-entreprise.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

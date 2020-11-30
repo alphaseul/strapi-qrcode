@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "adresses",
+  "info": {
+    "name": "Adresse"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "rue": {
+      "type": "string"
+    },
+    "ville": {
+      "type": "string"
+    },
+    "codePostal": {
+      "type": "biginteger"
+    },
+    "client": {
+      "via": "adresse",
+      "model": "client"
+    }
+  }
+}

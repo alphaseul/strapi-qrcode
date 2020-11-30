@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/categorie-annonces",
+      "handler": "categorie-annonce.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categorie-annonces/count",
+      "handler": "categorie-annonce.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categorie-annonces/:id",
+      "handler": "categorie-annonce.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/categorie-annonces",
+      "handler": "categorie-annonce.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/categorie-annonces/:id",
+      "handler": "categorie-annonce.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/categorie-annonces/:id",
+      "handler": "categorie-annonce.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
