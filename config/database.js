@@ -4,15 +4,16 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'bookshelf',
       settings: {
-        client: 'mysql',
-        host: env('DATABASE_HOST', '127.0.0.1'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapiqrcode'),
-        username: env('DATABASE_USERNAME', 'root'),
-        password: env('DATABASE_PASSWORD', 'alphasow'),
-        ssl: env.bool('DATABASE_SSL', true),
+        client: 'postgres',
+        host: env('DATABASE_HOST', 'qrcode.clzhqegxcvty.us-east-2.rds.amazonaws.com'),
+        port: env.int('DATABASE_PORT', 5432),
+        database: env('DATABASE_NAME', 'qrcode'),
+        username: env('DATABASE_USERNAME', 'postgres'),
+        password: env('DATABASE_PASSWORD', 'Qrcodeprotect59'),
       },
-      options: {}
+      options: {
+	ssl: false,
+      }
     },
   },
 });

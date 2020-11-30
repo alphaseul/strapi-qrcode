@@ -12,3 +12,16 @@ module.exports = ({ env }) => ({
   },
   // ...
 });
+module.exports = ({ env }) => ({
+  upload: {
+    provider: 'aws-s3',
+    providerOptions: {
+      accessKeyId: env('AKIAJHZLNDH7PX3SHEMQ'),
+      secretAccessKey: env('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'),
+      region: env('UE (Paris) eu-west-3'),
+      params: {
+        Bucket: env('my-project-strapi-image'),
+      },
+    },
+  },
+});
